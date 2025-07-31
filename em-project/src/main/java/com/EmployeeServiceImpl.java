@@ -1,26 +1,35 @@
 package com;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.example.em_project.Employee;
 import com.example.em_project.EmployeeService;
 
-public abstract class EmployeeServiceImpl implements EmployeeService {
+public  class EmployeeServiceImpl implements EmployeeService {
+     List<Employee>empoloyees = new ArrayList<>();
 
-
-
-       @Override
-    public Employee ceratEmployees(Employee employee) {
-       EmployeeService.add(employee);
+     @Override
+     public Employee createEmployee(Employee employee) {
+        empoloyees.add(employee);
         return employee;
     }
 
-    
+
+     @Override
+     public List<Employee> readEmployees() {
+        return empoloyees;
+     }
+
+
+
+
     @Override
-    public List<Employee> readEmployees() {
-        // TODO: implement method logic
-        return null;
+    public boolean deleteEmployee(Long id) {
+       empoloyees.remove(id);
+       return true;
     }
 
+  
  
 }
