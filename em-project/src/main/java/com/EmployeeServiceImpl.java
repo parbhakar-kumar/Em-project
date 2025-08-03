@@ -3,11 +3,15 @@ package com;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.example.em_project.Employee;
 import com.example.em_project.EmployeeService;
 
-public  class EmployeeServiceImpl implements EmployeeService {
-     List<Employee>empoloyees = new ArrayList<>();
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+
+        List<Employee>empoloyees = new ArrayList<>();
 
      @Override
      public Employee createEmployee(Employee employee) {
@@ -32,4 +36,7 @@ public  class EmployeeServiceImpl implements EmployeeService {
 
   
  
+
+    // Implement methods here
 }
+
