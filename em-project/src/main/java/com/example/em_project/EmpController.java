@@ -10,17 +10,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-
-
 @RestController
 public class EmpController {
-//  List<Employee>empoloyees = new ArrayList<>();
+    
+    @Autowired
+    EmployeeRepository employeeRepository;
 
-@Autowired
-EmployeeService employeeService;
+    @Autowired
+    EmployeeService employeeService;
 
     @GetMapping("employees")
-    public List<Employee> getAllEmpoloyees() { 
+    public List<Employee> getAllEmployees() { 
         return employeeService.readEmployees();
     }
 
@@ -31,6 +31,7 @@ EmployeeService employeeService;
         return "saved successfully";
         
     }
+    
     @DeleteMapping("employees/{id}")
     public String deleteEmployee(@PathVariable Long id){
          if(employeeService.deleteEmployee(id)) {
@@ -38,9 +39,4 @@ EmployeeService employeeService;
     }     
          return "Employee not found";
     }
-     
-
-    
-    
-    
 }
