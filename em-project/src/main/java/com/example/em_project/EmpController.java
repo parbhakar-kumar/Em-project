@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class EmpController {
     
-    @Autowired
-    EmployeeRepository employeeRepository;
+    // @Autowired
+    // EmployeeRepository employeeRepository;
 
     @Autowired
     EmployeeService employeeService;
