@@ -26,9 +26,9 @@ public class EmpController {
 
     @PostMapping("employees")
     public String createEmployee (@RequestBody Employee employee) {
-        employeeService.createEmployee(employee);
+       
          
-        return "saved successfully";
+        return  employeeService.createEmployee(employee);
         
     }
     

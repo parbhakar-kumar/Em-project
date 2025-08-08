@@ -1,37 +1,37 @@
-package com;
+// package com;
 
-import java.util.ArrayList;
-import java.util.List;
+// import java.util.ArrayList;
+// import java.util.List;
 
-import org.springframework.stereotype.Service;
+// import org.springframework.stereotype.Service;
 
-import com.example.em_project.Employee;
-import com.example.em_project.EmployeeService;
+// import com.example.em_project.Employee;
+// import com.example.em_project.EmployeeService;
 
-@Service
-public class EmployeeServiceImpl implements EmployeeService {
+// @Service
+// public class EmployeeServiceImpl implements EmployeeService {
 
-        List<Employee>empoloyees = new ArrayList<>();
+//         List<Employee>empoloyees = new ArrayList<>();
 
-     @Override
-     public Employee createEmployee(Employee employee) {
-        empoloyees.add(employee);
-        return employee;
-    }
-
-
-     @Override
-     public List<Employee> readEmployees() {
-        return empoloyees;
-     }
+//      @Override
+//      public Employee createEmployee(Employee employee) {
+//         empoloyees.add(employee);
+//         return employee;
+//     }
 
 
+//      @Override
+//      public List<Employee> readEmployees() {
+//         return empoloyees;
+//      }
 
 
-    @Override
-    public boolean deleteEmployee(Long id) {
-       empoloyees.remove(id);
-       return true;
-    }
 
-  }
+
+//     @Override
+//     public boolean deleteEmployee(Long id) {
+//        empoloyees.remove(id);
+//        return true;
+//     }
+
+//   }

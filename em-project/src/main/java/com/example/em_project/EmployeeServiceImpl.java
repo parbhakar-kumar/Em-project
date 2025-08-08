@@ -3,7 +3,6 @@ package com.example.em_project;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,12 +13,16 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
     EmployeeRepository employeeRepository;
     @Override
-    public Employee createEmployee(Employee employee) {
+    public String createEmployee(Employee employee) {
+        List<Employee> employees = new ArrayList<>();
         // Convert Employee to EmployeeEntity for persistence
-        EmployeeEntity entityEntity = new EmployeeEntity();
-        BeanUtils.copyProperties(employee, entityEntity);
-        employeeRepository.save(entityEntity);
-        return employee;
+        // EmployeeEntity entityEntity = new EmployeeEntity();
+        // BeanUtils.copyProperties(employee, entityEntity);
+        // employeeRepository.save(entityEntity);
+        // return employee;
+        employees.add(employee);
+        return " Saved Successfully";
+
     }
 
    
